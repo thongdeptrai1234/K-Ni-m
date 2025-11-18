@@ -12,6 +12,26 @@
             background-color: #F6bFb4;
         }
 
+        /* PHẦN MỚI: DÀNH CHO LOGO VÀ DÒNG CHỮ */
+        .logo-section {
+            padding: 20px 10px; /* Thêm khoảng đệm trên và dưới */
+            text-align: center; /* Căn giữa nội dung bên trong */
+            color: #4b0082; /* Màu chữ */
+        }
+
+        .logo-section h1 {
+            margin-bottom: 5px; /* Giảm khoảng cách giữa h1 và p */
+            font-size: 28px;
+            color: #8b0000; /* Màu nổi bật cho tên */
+        }
+
+        .logo-section p {
+            margin-top: 0;
+            font-style: italic;
+            font-size: 16px;
+        }
+        /* KẾT THÚC PHẦN MỚI */
+
         /* GALLERY ẢNH VÀ VIDEO */
         .gallery {
             padding: 10px;
@@ -79,16 +99,21 @@
     </style>
 </head>
 <body>
+    
+    <header class="logo-section">
+        <img src="logokiniem.png" alt="Logo Kỷ Niệm" style="max-width: 100px; height: auto; display: block; margin: 0 auto 10px;">
+        
+        <p>Tuổi trẻ là một chương sách ngắn ngủi; dù trang giấy có gấp lại nhanh đến mấy, mực của những kinh nghiệm và hình bóng của những nụ cười sẽ không bao giờ phai mờ!</p>
+    </header>
 
-    <!-- GALLERY ẢNH VÀ VIDEO -->
+    ---
+
     <div class="gallery">
-        <!-- VIDEO THUMBNAIL -->
         <div class="video-thumb">
             
             <div class="logo-overlay">VIDEO</div>
         </div>
 
-        <!-- TOÀN BỘ ẢNH CỦA BẠN -->
         <img src="z7236467322682_a2465f54f9a3b784a8d669e435f94621.jpg">
         <img src="z7236467325771_b8efb517dab9b25ba3704ab72d59fcb4.jpg">
         <img src="z7236467332668_126725f0336784c9f14c7038b5db93d5.jpg">
@@ -129,14 +154,12 @@
         <img src="z7236467345384_3a772739749e7975b1c449eb830016b2.jpg">
         <img src="z7236467322056_94bf63947913a7ead4e8775ba7889541.jpg">
     </div>
-
-    <!-- MODAL PHÓNG TO ẢNH -->
+    
     <div class="modal" id="modal">
         <span class="close-btn" id="closeBtn">×</span>
         <img id="modalImg">
     </div>
 
-    <!-- MODAL VIDEO -->
     <div class="modal" id="modalVideo">
         <span class="close-btn" id="closeVideoBtn">×</span>
         <video id="modalVideoContent" controls>
@@ -145,6 +168,7 @@
     </div>
 
     <script>
+        // (GIỮ NGUYÊN JAVASCRIPT)
         const modal = document.getElementById("modal");
         const modalImg = document.getElementById("modalImg");
         const closeBtn = document.getElementById("closeBtn");
@@ -194,8 +218,3 @@
 
 </body>
 </html>
-
-
-
-
-
